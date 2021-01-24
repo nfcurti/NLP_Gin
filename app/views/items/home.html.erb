@@ -1,88 +1,50 @@
         
-        <section id="hero" class=" align-items-center">
+        <section id="hero" class=" align-items-center" style="height:48em;margin-bottom:-10em">
 
-    <div class="container-fluid" data-aos="fade-up">
-      <div class="row justify-content-center">
-        <div style="    text-align: center;" class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>Transform natural language into ready to use code </h1>
-          <h2 style="    font-weight: 100;">Spend less time searching for code and more delivering.  </h2>
-          <div><a href="#about" class="btn-get-started scrollto" style="border-radius: 2em;">Get Early Access</a></div>
+    <div class="container-fluid" data-aos="fade-up" style="">
+      <div class="row justify-content-center" style="">
+        <div style="    text-align: center;" class="col-xl-6 col-lg-7 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1 style="    ;font-size:2.3em">Your bot for freelance job hunting </h1>
+          <h2 style="    font-weight: 200;font-size:1.3em">Ginevar pings you when a new freelance job is available on Reddit, Linkedin, Facebook Groups, and more!</h2>
+          
+
 			<span id=""></span>
 			 
         </div>
+
       </div>
     </div>
-    <div class="text-editor container">
-        <input style="display:none;margin-left:-15px;width: inherit;position: absolute;margin-top:-84px;" value="here">
-        <div style="margin-left: -15px;width: 71.2em;margin-top: -80px;background:transparent" class="input-group mb-3">
-		  <div class="input-group-prepend" style="background:transparent">
-		    <span class="input-group-text" id="basic-addon1" style="background:transparent;border:none">
-		      <img src=<%= asset_path('search.svg') %> class="img-responsive" alt="Responsive image" width="30" height="24" />
-		    </span>
-		  </div>
-		  <p id="typed" style="background:transparent;border:none;font-weight: 200;color:white!important" type="text" class="form-control"  value="JS, check if image exists" aria-describedby="basic-addon1"></p>
+    <style type="text/css">.pathu{display:none}</style>
+    <div class="row " style="display: block;margin:auto;
+    width: fit-content;margin-top: 6em">
+    <h2 style="    font-weight: 200;font-size: 0.7em;display: block;margin: auto;width: fit-content;margin-bottom:-1em">Available for...</h2>
+            <a href="https://discord.gg/pF3RmUhzK7" class="btn-get-started scrollto" style="border-radius: 3px;margin-right: 1em;width: 13em"><img src=<%= asset_path('discord.svg') %> class="img-responsive" alt="Responsive image" width="50" height="35" style="margin-right:00.5em"/>Discord</a>
+          <a href="#" onclick="alert('Whatsapp integration available soon!')" class="btn-get-started scrollto" style="border-radius: 3px;margin-right: 1em;width: 13em"><img src=<%= asset_path('wpp.svg') %> class="img-responsive" alt="Responsive image" width="50" height="35" style="margin-right:00.5em"/>Whatsapp</a>
+        <a onclick="alert('Telegram integration available soon!')" href="#" class="btn-get-started scrollto" style="border-radius: 3px;width: 13em"><img src=<%= asset_path('telegram.svg') %> class="img-responsive" alt="Responsive image" width="50" height="35" style="margin-right:00.5em"/>Telegram</a></div>
+    <div class="text-editor container" style="background: url(/assets/dscreen.png);
+    background-size: cover;
+    height: 20em;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    LEFT: 0;
+    right: 0;
+    top: 30em;">
+       
+       
 
-		</div>
-        <pre style="height: 28em;">
-          <code id="checkIfImageExists" >
-          <span class="purple">function</span> <span class="blue">checkIfImageExists</span>(url, callback) {
-              <span class="purple">const</span> img <span class="cyan">=</span> <span class="purple">new</span> <span class="yellow">Image</span>();
-              
-              img.<span class="red">src</span> <span class="cyan">=</span> url;
-              
-              <span class="purple">if</span> (img.<span class="red">complete</span>) {
-                <span class="blue">callback</span>(<span class="orange">true</span>);
-              } <span class="purple">else</span> {
-                img.<span class="red">onload</span> <span class="cyan">=</span> () <span class="purple">=></span> {
-                  <span class="blue">callback</span>(<span class="orange">true</span>);
-                };
-                img.<span class="red">onerror</span> <span class="cyan">=</span> () <span class="purple">=></span> {
-                  <span class="blue">callback</span>(<span class="orange">false</span>);
-                };
-              }
-            }
-          </code>
-      <code id="2x3grid" style="margin-top:-3em">
-          &lt;<span class="orange">div</span>&gt; 
-            &lt;<span class="orange">div <span class="blue">class</span>=<span class="green">"row"</span></span>&gt; 
-              &lt;<span class="orange">div <span class="blue">class</span>=<span class="green">"col-md-6"</span></span>&gt;&lt;<span class="orange">/div</span>&gt;
-              &lt;<span class="orange">div <span class="blue">class</span>=<span class="green">"col-md-6"</span></span>&gt;&lt;<span class="orange">/div</span>&gt;
-            &lt;<span class="orange">/div</span>&gt;
-            &lt;<span class="orange">div <span class="blue">class</span>=<span class="green">"row"</span></span>&gt; 
-              &lt;<span class="orange">div <span class="blue">class</span>=<span class="green">"col-md-6"</span></span>&gt;&lt;<span class="orange">/div</span>&gt;
-              &lt;<span class="orange">div <span class="blue">class</span>=<span class="green">"col-md-6"</span></span>&gt;&lt;<span class="orange">/div</span>&gt;
-            &lt;<span class="orange">/div</span>&gt;
-          &lt;<span class="orange">/div</span>&gt;
-      </code>
-	<code id="signupboot" class="width:fit-content">
-          &lt;<span class="orange">form</span>&gt;
-            &lt;<span class="orange">div <span class="blue">class</span>=<span class="green">"form-group"</span></span>&gt;
-              &lt;<span class="orange">label <span class="blue">for</span>=<span class="green">"exampleInputEmail1"</span></span>&gt; Email Address &lt;<span class="orange">/label</span>&gt;
-              &lt;<span class="orange">input <span class="blue">type</span>=<span class="green">"email"</span> <span class="blue">class</span>=<span class="green">"form-control"</span> <span class="blue">placeholder</span>=<span class="green">"Enter email"</span></span>&gt;
-              &lt;<span class="orange">small <span class="blue">class</span>=<span class="green">"form-text text-muted"</span></span>&gt;We'll never share your email with anyone else.&lt;<span class="orange">/small</span>&gt;
-              &lt;<span class="orange">small <span class="blue">for</span>=<span class="green">"exampleInputEmail1"</span></span>Email Address&gt;&lt;<span class="orange">/label</span>&gt;
-            &lt;<span class="orange">/div</span>&gt;
-            &lt;<span class="orange">div <span class="blue">class</span>=<span class="green">"form-group"</span></span>&gt;
-              &lt;<span class="orange">label <span class="blue">for</span>=<span class="green">"exampleInputPassword1"</span></span>&gt; Password &lt;<span class="orange">/label</span>&gt;
-              &lt;<span class="orange">input <span class="blue">type</span>=<span class="green">"password"</span> <span class="blue">class</span>=<span class="green">"form-control"</span> <span class="blue">placeholder</span>=<span class="green">"Password"</span></span>&gt;
-            &lt;<span class="orange">/div</span>&gt;
-            &lt;<span class="orange">button</span> <span class="blue">type</span>=<span class="green">"submit"</span> <span class="blue">class</span>=<span class="green">"btn btn-primary"</span>&gt;&lt;<span class="orange">/button</span>&gt;
-          &lt;<span class="orange">/form</span>&gt;
-	</code>
-        </pre>
       </div>
   </section><!-- End Hero -->
       
     </div>
-        <section id="services" class="services section-bg">
+        <section style="" id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Use Cases</h2>
+          <h2 style="z-index:0"> <br/><br/><br/></h2>
         </div>
-
         <div class="row" style="margin-bottom:-6em">
-      
+          
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" >
             <div style="border:1px solid rgba(116, 15, 214, 0.9);border-radius:3px" class="icon-box iconbox-yellow">
               <div class="icon">
@@ -92,7 +54,7 @@
                 <i class="bx bx-layer"></i>
               </div>
               <h4>Starters</h4>
-              <p>We make learning programming 10x easier by helping you to translate your ideas into code in the blink of an eye</p>
+              <p>Did you just become freelancer and don't know where to start getting clients? We got you.</p>
             </div>
           </div>
 
@@ -104,8 +66,8 @@
                 </svg>
                 <i class="bx bx-slideshow"></i>
               </div>
-              <h4>Educational Institutions</h4>
-              <p>Teach with examples, help your students learn faster and trigger curiosity to further develop their minds.</p>
+              <h4>Seasoned</h4>
+              <p>Are you an established freelancer and don't want to deal with the hassle of seeking new gigs? We got you.</p>
             </div>
           </div>
 
@@ -117,8 +79,8 @@
                 </svg>
                 <i class="bx bx-arch"></i>
               </div>
-              <h4>Businesses</h4>
-              <p>Boost productivity by reducing at maximum the development times using Ginevar's plug and play code.</p>
+              <h4>Automatization</h4>
+              <p>Are you an agency wanting to automatize bringing in new clients? We got you.</p>
             </div>
           </div>
 
@@ -138,12 +100,12 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
               <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>1 Dev</li>
-                <li>10 requests/ month</li>
+              <h4><sup>$</sup>0<span></span></h4>
+              <ul style="    height: 11.7em;">
+                <li>1 Week Full Access</li>
+                <li>50 job alerts</li>
                 <li>Support 24/7</li>
-                <li>HTML, CSS, JS Support</li>
+                <li>Sources: Reddit</li>
               </ul>
               <div class="btn-wrap">
                 <a href="#" class="btn-buy">Start Now</a>
@@ -153,13 +115,13 @@
 
           <div class="col-lg-4 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
             <div class="box featured">
-              <h3>Startup</h3>
-              <h4><sup>$</sup>1<span> / 100 searches</span></h4>
-              <ul>
-                <li>5 developers</li>
-                <li>1000 requests/ month</li>
+              <h3>Monthly</h3>
+              <h4><sup>$</sup>5<span> / month</span></h4>
+              <ul style="    height: 11.7em;">
+                <li>Monthly Access</li>
+                <li>Unlimited job alerts</li>
                 <li>Support 24/7</li>
-                <li>Full Library Support</li>
+                <li>Sources: Reddit, Facebook Groups, Linkedin</li>
               </ul>
               <div class="btn-wrap">
                 <a href="#" class="btn-buy">Start Now</a>
@@ -169,13 +131,13 @@
 
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
             <div class="box">
-              <h3>Enterprise</h3>
-              <h4><sup>$</sup>1.50<span> / 100 searches</span></h4>
-              <ul>
-                <li>Unlimited developers</li>
-                <li>Unlimited requests</li>
+              <h3>Yearly</h3>
+              <h4><sup>$</sup>36<span> / year</span></h4>
+              <ul style="    height: 11.7em;">
+                <li>Yearly Access</li>
+                <li>Unlimited job alerts</li>
                 <li>Support 24/7</li>
-                <li>Full Library Support</li>
+                <li>Sources: Reddit, Facebook Groups, Linkedin and Private Network</li>
               </ul>
               <div class="btn-wrap">
                 <a href="#" class="btn-buy">Start Now</a>
