@@ -4,26 +4,41 @@
     margin-top: 11em;
     padding: 30px 30px 10px;
     border-radius: 5px;
-    background: #fff;">
+    background: #fff;  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
 	
-	<p class='text-center'>Login with email </p>
-	<p style="color: #757575">Sign up with <a href="">Google</a> instead?
-</p>
+	<h1 class='text-center' style="color: #6610f2">Login </h1>
+	<div class='container'>
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>
+    </div>
+	<br>
 	<style type="text/css">label{color:white;}</style>
 	<div class="row">
-	  <div class="col-md-6 offset-3">
+	  <div class="col-md-8 " style="display: block;margin: auto;">
 	    <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
 
-	      <%= f.label :email %>
-	      <%= f.email_field :email, class: 'form-control' %>
+	      <%= f.email_field :email, class: 'form-control', placeholder: 'Email address', autocomplete:'off' %>
 
-	      <%= f.label :password %>
-	      <%= f.password_field :password, class: 'form-control' %>
+	      <%= f.password_field :password, class: 'form-control password_field', placeholder: 'Password' %>
+		
 
-	      <%= f.submit "Log in", class: " mt-2 btn btn-primary" %>
+	      <%= f.submit "Log in", class: " mt-2 btn login_submit" %>
 	    <% end %>
-
+	    <p class='text-center password_field' style="color: #757575">Don't have an account? <a href="/signup">Sign up</a> </p>
+		<p class='text-center' style="color: #757575"><a href="">Forgot my password</a></p>
+	
 	  </div>
 	</div>
 </div>
+<style type="text/css">
+a{color:#6610f2;}
+input{width:15em;}
+input:focus{border:1px solid #6610f2 !important;}
+label{color:#6610f2}
+.password_field{margin-top: 1em}
+.login_submit{    width: -webkit-fill-available;;color: #6610f2;background-color: transparent;border:3px solid #6610f2;}
+.login_submit:hover{    width: -webkit-fill-available;;color: white;background-color: #6610f2;border:3px solid #6610f2;}
+</style>
 

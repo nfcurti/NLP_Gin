@@ -1,22 +1,40 @@
-<h1 class='text-center'>Sign up</h1>
 
-<div class="row">
-  <div class="col-md-4 offset-4">
-    <%= form_with(model: @user, local: true) do |f| %>
+<div style="
+    width: 30em;
+    margin: auto;
+    margin-top: 11em;
+    padding: 30px 30px 10px;
+    border-radius: 5px;
+    background: #fff;  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
+  <h1 class='text-center' style="color: #6610f2">Sign up </h1>
+  <div class='container'>
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>
+    </div>
+  <div class="row">
+    <div class="col-md-8 " style="display: block;margin: auto;">
+      <%= form_with(model: @user, local: true) do |f| %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'mb-1 form-control' %>
+        <%= f.email_field :email, class: 'mb-1 form-control password_field', placeholder: 'Email Address' %>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'mb-1 form-control' %>
+        <%= f.password_field :password, class: 'mb-1 form-control password_field', placeholder: 'Password' %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'mb-1 form-control' %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'mb-1 form-control' %>
-
-      <%= f.submit "Create my account", class: "mt-2 btn btn-primary" %>
-    <% end %>
+        <%= f.password_field :password_confirmation, class: 'mb-1 form-control password_field', placeholder: 'Confirm Password' %>
+        <p class='text-center password_field' style="color: #757575;margin-bottom:0.5em">Read our <a href="">terms and conditions</a></p>
+        <%= f.submit "Create my account", class: "mt-2 btn btn-primary login_submit" %>
+      <% end %>
+      <p class='text-center password_field' style="color: #757575">Already have an account? <a href="/login">Login</a> </p>
+    </div>
   </div>
 </div>
+<style type="text/css">
+a{color:#6610f2;}
+input{width:15em;}
+input:focus{border:1px solid #6610f2 !important;}
+label{color:#6610f2}
+.password_field{margin-top: 1em}
+.login_submit{    width: -webkit-fill-available;;color: #6610f2;background-color: transparent;border:3px solid #6610f2;}
+.login_submit:hover{    width: -webkit-fill-available;;color: white;background-color: #6610f2;border:3px solid #6610f2;}
+</style>

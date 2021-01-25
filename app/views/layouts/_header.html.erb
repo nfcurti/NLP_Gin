@@ -18,18 +18,22 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
-     <a href="index"><img src=<%= asset_path('logo.svg') %> width="50"></a>
+     <a href="/"><img src=<%= asset_path('logo.svg') %> width="50"></a>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block ml-auto" style="">
         <ul class="">
           <li class="active"><a href="/">Home</a></li>
-          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
           <li><a href="contact">Contact</a></li>
         </ul>
       </nav><!-- .nav-menu -->
       <!--<%= link_to "Login", login_path, class: "get-started-btn scrollto" %>-->
-      <a href="" class="get-started-btn scrollto" >Login</a>
+      <% if logged_in? %>
+        <%= link_to "Logout", logout_path, class: "get-started-btn scrollto", method: :delete %>
+      <% else %>
+        <%= link_to "Get Started", login_path, class: "get-started-btn scrollto" %>
+      <%end%>
     </div>
   </header><!-- End Header -->
