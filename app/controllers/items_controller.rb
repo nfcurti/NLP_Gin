@@ -2,6 +2,16 @@ class ItemsController < ApplicationController
   before_action :logged_in_user
 
   def home
+    if logged_in?
+      cus_id =  Stripe::Customer.list({limit: 3, email:current_user.email}).data[0].id
+        if Stripe::Subscription.list({limit: 3, customer:cus_id}).data.length>0
+          current_user.subid = Stripe::Subscription.list({limit: 3, customer:cus_id}).data[0].id
+        else
+        end
+      p current_user
+    else
+      p 'NO ESTA LOGUEADO'
+    end
   end
 
   def new

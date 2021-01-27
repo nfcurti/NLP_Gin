@@ -1,0 +1,30 @@
+<div style="
+    width: 30em;
+    margin: auto;
+    margin-top: 11em;
+    padding: 30px 30px 10px;
+    border-radius: 5px;
+    background: #fff;  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
+  
+  <h1 class='text-center' style="color: #6610f2">Login </h1>
+  
+  <br>
+  <style type="text/css">label{color:white;}</style>
+  <div class="row">
+    <div class="col-md-8 " style="display: block;margin: auto;">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<style type="text/css">
+a{color:#6610f2;}
+input{width:15em;}
+input:focus{border:1px solid #6610f2 !important;}
+label{color:#6610f2}
+.password_field{margin-top: 1em}
+.login_submit{    width: -webkit-fill-available;;color: #6610f2;background-color: transparent;border:3px solid #6610f2;}
+.login_submit:hover{    width: -webkit-fill-available;;color: white;background-color: #6610f2;border:3px solid #6610f2;}
+</style>
+

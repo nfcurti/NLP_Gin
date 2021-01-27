@@ -18,8 +18,6 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
     else
-      p "users"
-      p User.all
       flash.now[:danger] = 'There was a problem'
       render 'new'
     end
@@ -28,6 +26,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :sub_id ,:password, :password_confirmation)
   end
 end

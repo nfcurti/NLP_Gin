@@ -17,10 +17,20 @@
     <style type="text/css">.pathu{display:none}</style>
     <div class="row " style="display: block;margin:auto;
     width: fit-content;margin-top: 6em">
-    <h2 style="    font-weight: 200;font-size: 0.7em;display: block;margin: auto;width: fit-content;margin-bottom:-1em">Available for...</h2>
-            <a href="https://discord.gg/pF3RmUhzK7" class="btn-get-started scrollto" style="border-radius: 3px;margin-right: 1em;width: 13em"><img src=<%= asset_path('discord.svg') %> class="img-responsive" alt="Responsive image" width="50" height="35" style="margin-right:00.5em"/>Discord</a>
-          <a href="#" onclick="alert('Whatsapp integration available soon!')" class="btn-get-started scrollto" style="border-radius: 3px;margin-right: 1em;width: 13em"><img src=<%= asset_path('wpp.svg') %> class="img-responsive" alt="Responsive image" width="50" height="35" style="margin-right:00.5em"/>Whatsapp</a>
-        <a onclick="alert('Telegram integration available soon!')" href="#" class="btn-get-started scrollto" style="border-radius: 3px;width: 13em"><img src=<%= asset_path('telegram.svg') %> class="img-responsive" alt="Responsive image" width="50" height="35" style="margin-right:00.5em"/>Telegram</a></div>
+      <h2 style="    font-weight: 200;font-size: 0.7em;display: block;margin: auto;width: fit-content;margin-bottom:-1em">Available for...</h2>
+        <a href="https://discord.gg/pF3RmUhzK7" class="btn-get-started scrollto" style="border-radius: 3px;margin-right: 1em;width: 13em">
+          <img src=<%= asset_path('discord.svg') %> class="img-responsive" alt="Responsive image" width="50" height="35" style="margin-right:00.5em"/>
+        Discord
+      </a>
+        <a href="#" onclick="alert('Whatsapp integration available soon!')" class="btn-get-started scrollto" style="border-radius: 3px;margin-right: 1em;width: 13em">
+          <img src=<%= asset_path('wpp.svg') %> class="img-responsive" alt="Responsive image" width="50" height="35" style="margin-right:00.5em"/>
+        Whatsapp
+      </a>
+        <a onclick="alert('Telegram integration available soon!')" href="#" class="btn-get-started scrollto" style="border-radius: 3px;width: 13em">
+          <img src=<%= asset_path('telegram.svg') %> class="img-responsive" alt="Responsive image" width="50" height="35" style="margin-right:00.5em"/>
+        Telegram
+      </a>
+    </div>
     <div class="text-editor container" style="background: url(<%= asset_path('dscreen.png') %>);
     background-size: cover;
     height: 20em;
@@ -108,7 +118,7 @@
                 <li>Sources: Reddit</li>
               </ul>
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Start Now</a>
+                <a href="#" class="btn-buy" id="free-btn-sub">Start Now</a>
               </div>
             </div>
           </div>
@@ -124,7 +134,11 @@
                 <li>Sources: Reddit, Facebook Groups, Linkedin</li>
               </ul>
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Start Now</a>
+                <form action="/subscribe" method="post">
+                  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                  <%= hidden_field_tag :price, 'price_1IDrMkGes1OWfTBdJ3KnoTYm' %>
+                  <input style="    outline: auto;" class="btn-buy" id="month-btn-sub" value="Start Now" type="submit">
+                </form>
               </div>
             </div>
           </div>
@@ -140,7 +154,11 @@
                 <li>Sources: Reddit, Facebook Groups, Linkedin and Private Network</li>
               </ul>
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Start Now</a>
+                <form action="/subscribe" method="post">
+                  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                  <%= hidden_field_tag :price, 'price_1IDrNBGes1OWfTBdnjaWZ2Vx' %>
+                  <input style="    outline: auto;" class="btn-buy" id="year-btn-sub" value="Start Now" type="submit">
+                </form>
               </div>
             </div>
           </div>
@@ -150,4 +168,5 @@
 
       </div>
     </section><!-- End Pricing Section -->
+    <%= javascript_pack_tag 'script' %>
 <%= render "layouts/footer" %>

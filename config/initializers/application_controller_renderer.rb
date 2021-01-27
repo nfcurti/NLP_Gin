@@ -1,8 +1,3 @@
-# Be sure to restart your server when you modify this file.
+# Set your secret key. Remember to switch to your live secret key in production!
+# See your keys here: https://dashboard.stripe.com/account/apikeys
 
-# ActiveSupport::Reloader.to_prepare do
-#   ApplicationController.renderer.defaults.merge!(
-#     http_host: 'example.org',
-#     https: false
-#   )
-# end

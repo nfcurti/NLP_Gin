@@ -1,5 +1,6 @@
 #sessions_controller.rb
 class SessionsController < ApplicationController
+  before_action :logged_in_user
   def new
     if logged_in?
       redirect_to root_url
