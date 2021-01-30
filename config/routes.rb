@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   resources :users
   get "*path" => redirect("/")
+  mount StripeEvent::Engine, at: '/hook' # provide a custom path
 end
