@@ -16,7 +16,7 @@ client.execute do |builder|
 end
 
 StripeEvent.configure do |events|
-  events.subscribe 'invoice.payment_succeeded' do |event|
+  events.subscribe 'invoice.paid' do |event|
 
 	    # Define subscriber behavior based on the event object
 	    event.class       #=> Stripe::Event
