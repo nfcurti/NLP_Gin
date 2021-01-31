@@ -61,6 +61,17 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "index_production"
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = true # for test
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :address              => 'mail.privateemail.com',
+  :port                 => 587,
+  :user_name            => 'info@ginevar.com',
+  :password             => '38069123',
+  :authentication       => :plain,
+  :enable_starttls_auto => true  }
 
   config.action_mailer.perform_caching = false
 
