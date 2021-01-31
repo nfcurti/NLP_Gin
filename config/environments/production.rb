@@ -70,7 +70,7 @@ Rails.application.configure do
   :port                 => 587,
       :domain => "sandboxabe116f4b0c2481ca8df5dd728e2a1f6.mailgun.org",
       :user_name => "postmaster@sandboxabe116f4b0c2481ca8df5dd728e2a1f6.mailgun.org",
-      :password => "dab3df4b38c69868572a39d562bf1b81-07bc7b05-d483acc1"
+      :password => "dab3df4b38c69868572a39d562bf1b81-07bc7b05-d483acc1",
   :authentication       => :plain,
   :enable_starttls_auto => true  }
 
