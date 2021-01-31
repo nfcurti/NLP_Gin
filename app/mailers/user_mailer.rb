@@ -3,8 +3,8 @@ class UserMailer < ActionMailer::Base
 
   def welcome_email
     @user = params[:user]
-    @url  = 'http://example.com/login'
-    mail(to: @user, subject: 'Welcome to My Awesome Site')
+    @url  = params[:key]
+    mail(to: @user, subject: 'Welcome to Ginevar!')
   end
   layout 'mailer'
 end

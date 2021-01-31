@@ -24,7 +24,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'stripe'
 gem 'stripe_event'
 gem 'discordrb'
-
+gem 'airtable'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
