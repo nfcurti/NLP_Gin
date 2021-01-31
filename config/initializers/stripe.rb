@@ -5,7 +5,7 @@ require 'airtable'
 @client = Airtable::Client.new("keyWgEI0t7Z6TXkog")
 @table = @client.table("appWlcYj2idOcJ30G", "keys")
 Stripe.api_key             = 'sk_test_HkTSFJCzngOdIFqnGDP9Uked00J29GL5Jq'     # e.g. sk_live_...
-StripeEvent.signing_secret = 'whsec_BITjYLGxHbmJrw78AUiL6JHUddJA2dNr' # e.g. whsec_...
+StripeEvent.signing_secret = 'whsec_bIeotPWRdGZuyDpdF6ZSpFnafl8SULJQ' # e.g. whsec_...
 WEBHOOK_URL = 'https://discord.com/api/webhooks/805098373035327529/3Jybi9zHJEnZ6N2xluGv81vEOxmo_QORX8BcTSerTcWZG_Rni0H5hUSWZLTUllUQpd6p'.freeze
 
 client = Discordrb::Webhooks::Client.new(url: WEBHOOK_URL)
@@ -29,7 +29,7 @@ StripeEvent.configure do |events|
 	    client.execute do |builder|
 		  builder.content = 'Client '+@mail_to_address+' has paid 5$/mo'
 		end
-		@table.destroy(@bill.record)
+		@table.destroy(@bill.id)
   end
 
   events.all do |event|
