@@ -6,7 +6,7 @@ require 'airtable'
 @table = @client.table("appWlcYj2idOcJ30G", "keys")
 Stripe.api_key             = 'sk_test_HkTSFJCzngOdIFqnGDP9Uked00J29GL5Jq'     # e.g. sk_live_...
 StripeEvent.signing_secret = 'whsec_BITjYLGxHbmJrw78AUiL6JHUddJA2dNr' # e.g. whsec_...
-WEBHOOK_URL = 'https://discord.com/api/webhooks/805098373035327529/3Jybi9zHJEnZ6N2xluGv81vEOxmo_QORX8BcTSerTcWZG_Rni0H5hUSWZLTUllUQpd6p'.freeze
+WEBHOOK_URL = 'https://discord.com/api/webhooks/805794250767073290/s8Y-wSojS_HMzfvXEKlYItBJmqJ8Alp-LL_9BOjYfpAwCirNB2SzHCUP5xv8mBXvtYh2'.freeze
 
 client = Discordrb::Webhooks::Client.new(url: WEBHOOK_URL)
 client.execute do |builder|
