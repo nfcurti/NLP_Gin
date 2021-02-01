@@ -30,7 +30,7 @@ class CheckoutController < ApplicationController
 	      current_user.subid = Stripe::Subscription.list({limit: 3, customer:cus_id}).data[0].id
 		Stripe::Subscription.delete(current_user.subid)
         flash[:danger] = "You have successfully unsubscribed, you will no longer be charged."
-        flash[:danger] = "You no longer have access to job alerts."
+        flash[:danger] = "You have no longer access."
         flash[:success] = "Hope you come back!"
 
 	end
