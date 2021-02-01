@@ -67,7 +67,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
   :address              => 'smtp.elasticemail.com',
-  :port                 => 2525,
+  :port                 => 587,
       :user_name => ENV["SENDGRID_USERNAME"],
       :password => ENV["SENDGRID_PASSWORD"],
   :authentication       => :plain,
