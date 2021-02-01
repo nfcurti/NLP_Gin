@@ -4,7 +4,8 @@ require 'discordrb/webhooks'
 require 'airtable'
 @client = Airtable::Client.new("keyWgEI0t7Z6TXkog")
 @table = @client.table("appWlcYj2idOcJ30G", "keys")
-Stripe.api_key             = 'sk_test_HkTSFJCzngOdIFqnGDP9Uked00J29GL5Jq'     # e.g. sk_live_...
+Stripe.api_key             = 'sk_test_HkTSFJCzngOdIFqnGDP9Uked00J29GL5Jq'
+#whsec_bIeotPWRdGZuyDpdF6ZSpFnafl8SULJQ BUT OFFICIAL IS whsec_BITjYLGxHbmJrw78AUiL6JHUddJA2dNr    # e.g. sk_live_...
 StripeEvent.signing_secret = 'whsec_BITjYLGxHbmJrw78AUiL6JHUddJA2dNr' # e.g. whsec_...
 WEBHOOK_URL = 'https://discord.com/api/webhooks/805794250767073290/s8Y-wSojS_HMzfvXEKlYItBJmqJ8Alp-LL_9BOjYfpAwCirNB2SzHCUP5xv8mBXvtYh2'.freeze
 
