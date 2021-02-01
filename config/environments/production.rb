@@ -57,7 +57,7 @@ Rails.application.configure do
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
-
+#1fdqpeqb9914 app199948680@heroku.com
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "index_production"
@@ -66,8 +66,8 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  :address              => 'smtp.sendgrid.org',
-  :port                 => 587,
+  :address              => 'smtp.elasticemail.com',
+  :port                 => 2525,
       :user_name => ENV["SENDGRID_USERNAME"],
       :password => ENV["SENDGRID_PASSWORD"],
   :authentication       => :plain,
