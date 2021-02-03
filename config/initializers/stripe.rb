@@ -11,7 +11,6 @@ WEBHOOK_URL = 'https://discord.com/api/webhooks/805794250767073290/s8Y-wSojS_HMz
 
 client = Discordrb::Webhooks::Client.new(url: WEBHOOK_URL)
 client.execute do |builder|
-  builder.content = 'Initialized Discord Bot for Stripe webhooks'
   #make_invite(max_age = 0, max_uses = 0, temporary = false, unique = false, reason = nil)
 
 end
