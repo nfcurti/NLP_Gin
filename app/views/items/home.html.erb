@@ -14,19 +14,19 @@
 
       </div>
     </div>
-    <style type="text/css">.pathu{display:none}</style>
+
     <div class="row " style="display: block;margin:auto;
     width: fit-content;margin-top: 6em">
-      <h2 style="    font-weight: 200;;display: block;margin: auto;width: fit-content;margin-bottom:-1em">Available for...</h2>
-        <a href="https://discord.gg/pF3RmUhzK7" class="btn-get-started scrollto" style="border-radius: 3px;margin-right: 1em;width: 13em">
+      <h2 class="checkav" style="    font-weight: 200;;display: block;margin: auto;width: fit-content;margin-bottom:-1em" data-toggle="tooltip" title="Discord is up and running &#10084;&#65039;">Check Availability<h2>
+        <a data-toggle="tooltip" title="Available &#10084;&#65039;" href="#" class="btn-get-started scrollto" style="cursor:default;border-radius: 3px;margin-right: 1em;width: 13em" >
           <img src=<%= asset_path('discord.svg') %> class="img-responsive" alt="Responsive image" width="50" height="35" style="margin-right:00.5em"/>
         Discord
       </a>
-        <a href="#" onclick="alert('Whatsapp integration available soon!')" class="btn-get-started scrollto" style="border-radius: 3px;margin-right: 1em;width: 13em">
+        <a data-toggle="tooltip" title="Coming Soon!"  href="#"  class="btn-get-started scrollto" style="cursor:default;border-radius: 3px;margin-right: 1em;width: 13em">
           <img src=<%= asset_path('wpp.svg') %> class="img-responsive" alt="Responsive image" width="50" height="35" style="margin-right:00.5em"/>
         Whatsapp
       </a>
-        <a onclick="alert('Telegram integration available soon!')" href="#" class="btn-get-started scrollto" style="border-radius: 3px;width: 13em">
+        <a data-toggle="tooltip" title="Coming Soon!"  href="#" class="btn-get-started scrollto" style="cursor:default;border-radius: 3px;width: 13em">
           <img src=<%= asset_path('telegram.svg') %> class="img-responsive" alt="Responsive image" width="50" height="35" style="margin-right:00.5em"/>
         Telegram
       </a>
@@ -81,7 +81,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 saiz" data-aos="zoom-in" data-aos-delay="300">
             <div style="border:1px solid rgba(116, 15, 214, 0.9);border-radius:3px" class="icon-box iconbox-teal">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -107,23 +107,8 @@
 
         <div class="row" style=" margin:auto">
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="box">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span></span></h4>
-              <ul style="    height: 11.7em;">
-                <li>1 Week Full Access</li>
-                <li>50 job alerts</li>
-                <li>Support 24/7</li>
-                <li>Sources: Reddit</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy" id="free-btn-sub">Start Now</a>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
             <div class="box featured">
               <h3>Monthly</h3>
               <h4><sup>$</sup>5<span> / month</span></h4>
@@ -143,7 +128,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-6 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
             <div class="box">
               <h3>Yearly</h3>
               <h4><sup>$</sup>36<span> / year</span></h4>
@@ -167,6 +152,32 @@
         </div>
 
       </div>
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
     </section><!-- End Pricing Section -->
+    <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
     <%= javascript_pack_tag 'script' %>
 <%= render "layouts/footer" %>

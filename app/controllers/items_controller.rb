@@ -3,7 +3,10 @@ class ItemsController < ApplicationController
 
   def home
     if logged_in?
-      cus_id =  Stripe::Customer.list({limit: 3, email:current_user.email}).data[0].id
+        if Stripe::Customer.list({limit: 3, email:current_user.email}).data.length>0
+        cus_id =  Stripe::Customer.list({limit: 3, email:current_user.email}).data[0].id
+        else
+        end
         if Stripe::Subscription.list({limit: 3, customer:cus_id}).data.length>0
           current_user.subid = Stripe::Subscription.list({limit: 3, customer:cus_id}).data[0].id
         else

@@ -2,12 +2,13 @@
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
+
     <div class="container d-flex align-items-center">
      <a href="/"><img src=<%= asset_path('logo.svg') %> width="50"></a>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav class="nav-menu d-none d-lg-block ml-auto" style="">
+      <nav class=" nav-menu d-none d-lg-block ml-auto" style="">
         <ul class="">
           <li class="active"><a href="/">Home</a></li>
           <li><a href="/#pricing">Pricing</a></li>
@@ -18,19 +19,41 @@
       
       <% if logged_in? %>
         <% if active_sub? %>
-        <%= link_to "Cancel Subscription", '/unsubscribe', class: "get-started-btn scrollto cancel_sub", method: :delete %>
+        <%= link_to "Cancel Subscription", '/unsubscribe', class: "get-started-btn scrollto cancel_sub stdesk", method: :delete %>
       <% else %>
       <%end%>
-        <%= link_to "Logout", logout_path, class: "get-started-btn scrollto", method: :delete %>
+        <%= link_to "Logout", logout_path, class: "get-started-btn scrollto stdesk", method: :delete %>
       <% else %>
-        <%= link_to "Get Started", login_path, class: "get-started-btn scrollto" %>
+        <%= link_to "Get Started", login_path, class: "get-started-btn scrollto stdesk" %>
+      <%end%>
+
+      <% if logged_in? %>
+        <% if active_sub? %>
+        <%= link_to "Cancel Subscription", '/unsubscribe', class: "get-started-btn scrollto cancel_sub mbcs mobdesk", method: :delete %>
+      <% else %>
+      <%end%>
+        <%= link_to "Logout", logout_path, class: "get-started-btn scrollto mbl mobdesk", method: :delete %>
+      <% else %>
+        <%= link_to "Get Started", login_path, class: "get-started-btn scrollto mbgs mobdesk" %>
       <%end%>
     </div>
   </header><!-- End Header -->
   <style type="text/css">
     .bgyy{background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url(../img/hero-bg.jpg) center center no-repeat;}
     .cancel_sub:hover{background:#E50914;border:2px solid #E50914}
+      @media only screen and (max-width: 800px) {
+        .stdesk{display:none;}
+        .mbl{    margin-left: -3em;}
+        .mbcs{    margin-left: 2em;}
+        .mbgs{
+    right: 0;
+    position: absolute;}
+      }
+      @media only screen and (min-width: 800px) {
+        .mobdesk{display:none;}
+      }
   </style>
+
   <script type="text/javascript">
     $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
