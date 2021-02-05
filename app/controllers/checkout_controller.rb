@@ -18,9 +18,7 @@ class CheckoutController < ApplicationController
 				      }],
 				    )
 				  rescue => e
-				    halt 400,
-				        { 'Content-Type' => 'application/json' },
-				        { 'error': { message: e.error } }.to_json
+				    p e.error
 				  end
 
 				  @super_id =  stripe_session.id
