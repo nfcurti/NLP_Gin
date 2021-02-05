@@ -10,10 +10,7 @@ StripeEvent.signing_secret = 'whsec_BITjYLGxHbmJrw78AUiL6JHUddJA2dNr' # e.g. whs
 WEBHOOK_URL = 'https://discord.com/api/webhooks/805794250767073290/s8Y-wSojS_HMzfvXEKlYItBJmqJ8Alp-LL_9BOjYfpAwCirNB2SzHCUP5xv8mBXvtYh2'.freeze
 
 client = Discordrb::Webhooks::Client.new(url: WEBHOOK_URL)
-client.execute do |builder|
-  #make_invite(max_age = 0, max_uses = 0, temporary = false, unique = false, reason = nil)
 
-end
 
 StripeEvent.configure do |events|
   events.subscribe 'invoice.paid' do |event|
