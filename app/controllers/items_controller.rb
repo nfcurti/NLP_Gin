@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :logged_in_user
+  skip_before_action :verify_authenticity_token
   
   def home
     if logged_in?
