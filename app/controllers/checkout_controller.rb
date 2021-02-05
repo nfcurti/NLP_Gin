@@ -5,6 +5,7 @@ class CheckoutController < ApplicationController
 	def new
 			if logged_in?
 				  begin
+				  	p "Iniciando sesion"
 				    stripe_session = Stripe::Checkout::Session.create(
 				      success_url: 'https://ginevar.com?session_id={CHECKOUT_SESSION_ID}',
 				      cancel_url: 'https://ginevar.com',
