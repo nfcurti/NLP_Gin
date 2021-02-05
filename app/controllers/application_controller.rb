@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
-	Stripe.api_key = 'sk_test_HkTSFJCzngOdIFqnGDP9Uked00J29GL5Jq'
+	Stripe.api_key = ENV["STRIPE_APIKEY"]
 
   private
   def logged_in_user

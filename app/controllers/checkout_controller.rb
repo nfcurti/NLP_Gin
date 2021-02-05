@@ -1,13 +1,13 @@
 class CheckoutController < ApplicationController
  	before_action :logged_in_user
-
+ 	skip_before_filter :verify_authenticity_token, :only => :new
 
 	def new
 			if logged_in?
 				  begin
 				    stripe_session = Stripe::Checkout::Session.create(
-				      success_url: 'http://ginevar.com?session_id={CHECKOUT_SESSION_ID}',
-				      cancel_url: 'http://ginevar.com',
+				      success_url: 'https://ginevar.com?session_id={CHECKOUT_SESSION_ID}',
+				      cancel_url: 'https://ginevar.com',
 				      payment_method_types: ['card'],
 				      mode: 'subscription',
 				      customer_email: current_user.email,
