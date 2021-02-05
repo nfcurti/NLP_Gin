@@ -1,6 +1,6 @@
 class CheckoutController < ApplicationController
  	before_action :logged_in_user
- 	skip_before_filter :verify_authenticity_token, :only => :new
+ 	skip_before_action :verify_authenticity_token, :only => :new
 
 	def new
 			if logged_in?
