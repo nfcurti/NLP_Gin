@@ -16,7 +16,7 @@
         </ul>
       </nav><!-- .nav-menu -->
       <!--<%= link_to "Login", login_path, class: "get-started-btn scrollto" %>-->
-      
+      <%= link_to "Browse Jobs", '/browse', class: "browse get-started-btn scrollto stdesk" %>
       <% if logged_in? %>
         <% if active_sub? %>
         <%= link_to "Cancel Subscription", '/unsubscribe', class: "get-started-btn scrollto cancel_sub stdesk", method: :delete %>
@@ -39,6 +39,9 @@
     </div>
   </header><!-- End Header -->
   <style type="text/css">
+    .browse{background: white;
+    border: 2px solid #ffffff90;color: rgba(116, 15, 214, 0.9)}
+    .browse:hover{color:rgba(116, 15, 214, 0.6);}
     .bgyy{background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url(../img/hero-bg.jpg) center center no-repeat;}
     .cancel_sub:hover{background:#E50914;border:2px solid #E50914}
       @media only screen and (max-width: 800px) {
