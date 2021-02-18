@@ -35,7 +35,7 @@
                 <form action="/subscribe" method="post">
                   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
                   
-                  <a href="<%=record.url%>"  style="    outline: auto;;float: right;;border:none;color:white" class="btn-buy" id="month-btn-sub" >Go To Site</a>
+                  <a href="https://www.reddit.com/message/compose/?to=<%=record.author%>"  style="    outline: auto;;float: right;;border:none;color:white" class="btn-buy" id="month-btn-sub" >Apply</a>
                   <a data-toggle="tooltip" title="Only for paid members" disabled style="    outline: auto;background: #00000050 !important;float: right;;border:none;color:white" class="btn-buy" id="month-btn-sub" value="" type="submit">Automatic Application</a>
                 </form>
               </div>
